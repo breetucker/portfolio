@@ -117,7 +117,7 @@
 				<div id="contactHTML" class="contactCss">
 					<label for="contactForm">
 						<h3>Contact:</h3>
-						<p>Email:<a href="mailto: breetucker@live.com">  Breetucker@live.com</a></p>
+						<p>Email:<a href="mailto: contact@itbree.com, breetucker@live.com">  contact@itbree.com</a></p>
 						<input type="text" placeholder="Please enter your name here." required />
 						<input type="email" placeholder="Email" required />
 						<input type="number" name="contactPhoneNumber" id="contactNumber" placeholder="Contact #">
