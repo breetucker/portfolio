@@ -710,7 +710,7 @@ li #catImage {
         position:absolute;
         right: 85px;
         background: var(--darkPink);
-        width: 220px;
+        width: 280px;
         transition: margin-right 1s ease-out;
         z-index: 7;
         border-radius:  8px;
@@ -773,8 +773,8 @@ li #catImage {
         width:23px;
     }
     #menuHTMLWrapper .position {
-        right: 140px;
-        width: 200px;
+        right: 40px;
+        width: 260px;
     }
     #contactHTML {
         width: 250px;
