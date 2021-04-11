@@ -12,6 +12,7 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight:600;
     margin: 0;
+    background-color: var(--pink);
 }
 #container {
     display: flex;
@@ -27,9 +28,7 @@ body {
     border: 2px solid transparent;
     box-sizing: border-box;
     width: 90%;
-    min-width: 940px;
-    max-width: 940px;
-    min-height: 700px;
+    max-width: 940px;  
     border-radius: 2.5rem;
     box-shadow: var(--darkPink) 10px 8px 15px 1px;
     margin-top: 0;
@@ -110,9 +109,12 @@ li #catImage {
 /* Side Menu */
 #menuHTMLWrapper  .position{
     position:absolute;
-    right: 80px;
+    right: 125px;
     background: var(--darkPink);
     width: 300px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
     transition: margin-right 1s ease-out;
     z-index: 7;
     border-radius:  8px;
@@ -121,6 +123,18 @@ li #catImage {
     margin-top: 100px;
     opacity: .9;
     color: var(--white);
+}
+#menuHTMLWrapper .position::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+    height: 4px;
+    border: 1px solid var(--white);
+    padding-left: 2px;
+}
+
+#menuHTMLWrapper .position::-webkit-scrollbar-thumb{
+    background-color: var(--pink);
+    border-right: 1px solid var(--white);
 }
 .show {
     z-index: 7;
@@ -134,7 +148,11 @@ li #catImage {
     opacity: 1;   
 }
 #homeBtn a{
-    text-decoration: none;
+    text-decoration: none !important;
+    color: var(--white);
+}
+#aboutBtn a{
+    text-decoration: none !important;
     color: var(--white);
 }
 #contactHTML h3 {
@@ -158,7 +176,7 @@ li #catImage {
     color: var(--white);
 }
 .show2 {
-    margin-left: 530px;
+    margin-left: 440px;
     transition: margin-right 1s ease-out;
 }
 .contactCss a {
@@ -199,6 +217,57 @@ li #catImage {
     font-family: 'Open Sans Condensed', sans-serif;
     border:transparent;
 }
+/* Projects */
+.mySlides {
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+    height: 200px;
+}
+.display-left, .display-right {
+
+   
+    background: transparent;
+    border: none;
+}
+.display-left {
+    float: left !important;
+}
+.display-right {
+    float: right !important;
+}
+.oddSlides {
+    text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column; 
+    position:relative   
+}
+#portfolioHTML {
+    height: 400px;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.slideBtns {
+    padding: 0.1em 16px;
+}
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    border-radius: 50%;
+    color: var(--white)
+}
+.w3-border {
+    border: 1px solid #ccc !important;
+}
+
+
+
 /* Fun Tab */
 #weather {
     display: flex;
@@ -284,37 +353,154 @@ font-size: 25px;
        left: 50%;
        position: absolute;
        z-index: 1;
-       height: auto;
-       max-height: 692px; 
+       max-height: 692px !important; 
        opacity: 0.7;
        border: 2px solid var(--white);
        border-radius: 10px;
    }
+/* Carousel*/
+
+.slideshow-container * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides img {
+    border-radius: 10px;
+}
+h4 {
+    text-align: center;
+}
+.thumbnailBtns {
+    text-align: center;
+}
+.thumbnailBtns button {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    background: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--darkPink);
+    box-shadow: #976c63 3px 3px 2px 1px;
+}
+.thumbnailBtns button a {
+    text-decoration: none;
+    color: var(--white);
+}
+.thumbnailBtns button:hover {
+    cursor: pointer;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
 
 
 /* Media */
 
 
-@media (max-width: 1000px){
+@media screen and (max-width: 950px){
  
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    overflow: hidden ;
+    overflow: hidden;
+    height: 100vh;
+   
     
 }
-#mainContainer {
+#mainContainer{
     background: var(--pink);
-    border: 2px solid transparent;
+    min-width: 100px;
+    max-width: 900px;
+    border: none;
     box-sizing: border-box;
-    min-width: 550px;
-    min-height:  700px;
-    border-radius: 2.5rem;
-    box-shadow: var(--darkPink) 10px 8px 15px 1px;
-    margin-top: 0;
-    padding-right: 0;
+    border-radius: none;
+    box-shadow: none;
+    margin-top: 0;        padding-right: 0;
     overflow:hidden;
     margin-right: 0;
 }
@@ -420,7 +606,7 @@ li #catImage {
 /* Side Menu */
 #menuHTMLWrapper  .position{
     position:absolute;
-    right: 80px;
+    right: 75px;
     background: var(--darkPink);
     width: 300px;
     transition: margin-right 1s ease-out;
@@ -487,11 +673,12 @@ li #catImage {
         padding-left: 90px;
     }
     #aboutHTML span{
-        display: flex;
-        font-weight: 400;
+       display: flex;
+       flex-direction: column;
     }
     #aboutHTML span p {
         padding: 2px;
+        margin: 0;
     }
     #icons {
         padding-left: .7rem;
@@ -509,10 +696,9 @@ li #catImage {
         z-index: 4
        }
     #bgImage {
-        left: 18%;
+        left: 15% ;
         z-index: 1;
         opacity: 0.4;
-        width: 400px;
         border: 2px solid var(--white);
         border-radius: 10px;
         
@@ -522,7 +708,7 @@ li #catImage {
     }
     #menuHTMLWrapper  .position{
         position:absolute;
-        right: 80px;
+        right: 85px;
         background: var(--darkPink);
         width: 220px;
         transition: margin-right 1s ease-out;
@@ -587,7 +773,7 @@ li #catImage {
         width:23px;
     }
     #menuHTMLWrapper .position {
-        right: 50px;
+        right: 140px;
         width: 200px;
     }
     #contactHTML {
@@ -597,21 +783,25 @@ li #catImage {
         margin-left: 14%;
     }
     #icons{
-        margin-left: 40px;
+        margin-left: 15%;
     }
     footer {
         text-align: center;
-        margin-right: 40px;
+        margin-right: 30%;
         margin-top: 20px;
     }
 }
 @media screen and (max-width:390px){
     #sideMenu {
         left: 25px;
+        margin-top: 15px;
     }
-    #sideMenu li a {
+    #sideMenu{
         font-size: 10px;
-        padding: 2px;
+        justify-content: space-between;
+    }
+    #flexContainer{
+        padding-left: 32px;
     }
     #contactHTML {
         width: 200px;
@@ -620,10 +810,36 @@ li #catImage {
         margin-left: 40px;
     }
     #menuHTMLWrapper .position {
-        right: 20px;
+        right: 45px;
         width: 200px;
     }
     .show {
         margin-right: -300px;
+    }
+    #icons {
+        margin-top: 0px;
+        padding-top: 0;
+        padding-left: 2px;
+    }
+    @media screen and (max-width:325px) {
+        #sideMenu {
+            margin-top:20px;
+        }
+        #menuHTMLWrapper .position {
+            right: 10px;
+            width: 200px;
+        }
+        #flexContainer{
+            margin-top: 40px;
+        }
+        #bkgImg {
+            top: 14%;
+        }
+        #icons {
+            margin-left: 20px;
+        }
+        footer{
+            margin-top: 0;
+        }
     }
 }
