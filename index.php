@@ -37,19 +37,17 @@
 				</div>
 				<div id="menuHTMLWrapper">
 					<div id="aboutHTML" class="show position">
-						<p>A website is the bedrock of all digital activities. Without a website, a business has no digital headquarters.</p>
-						<p>Hello, I'm Bree! I design and build beautiful, responsive (mobile friendly) websites designed to engage your audience, deliver your message, and establish your brand.</p>
-						<p>I've been in the industry since earning my certification from Jefferson State College in the Spring of 2021.</p>
+						<p>Hello, I'm Bree! I'm a junior web developer from Birmingham, AL. 
+						<p>I've always had a special interest with computers since some of my earliest memories - you can almost always find me in front of one.  I'm a bit of a nut when it comes to perfecting things.  If's it's not perfect, I'm not satisfied. This bad trait does nothing but benefit you, the user. I will always work my hardest to achieve a better solution.  </p>
 						<div id="skills">
-							<strong><u>Skills</u></strong>
-							<span>
-							<p>HTML</p>
-							<p>CSS</p>
-							<p>Javascript</p>
-							<p>jQuery</p>
-							<p>MySQL</p>
-							<p>PHP</p>
-							</span>
+							<p>Currently focusing on: PHP & MySQL</p>
+							<strong><u>Skill Toolbelt:</u></strong>
+							<ul id="skillIcons">
+								<li><i class="fab fa-html5"></i>HTML</li>
+								<li><i class="fab fa-css3-alt"></i>CSS</li>
+								<li><i class="fab fa-js-square"></i>JS</li>
+							</ul>
+							
 							</div>
 					</div>
 					<div id="portfolioHTML" class="show position">
@@ -106,26 +104,25 @@
 								<div id="tempDescription">This data will only display if you accept location services.</div>
 							</div>
 						</div>
-						<!-- <p id="gamePara">Care to play a game?</p>
-						<a id="pongLink" href="pong.php" target="popup" 
-						onclick="window.open('pong.php', 'popup','width=600, height=400, scrollbars=no,resizeable=no'); return false;">Click me!</a> -->
 
 					</div>
 				</div>
 			</div>
-			<form>
-				<div id="contactHTML" class="contactCss">
+			<div id="contactHTML" class="contactCss">
 					<label for="contactForm">
 						<h3>Contact:</h3>
 						<p>Email:<a href="mailto: contact@itbree.com, breetucker@live.com">  contact@itbree.com</a></p>
-						<input type="text" placeholder="Please enter your name here." required />
-						<input type="email" placeholder="Email" required />
-						<input type="number" name="contactPhoneNumber" id="contactNumber" placeholder="Contact #">
-						<textarea placeholder="Message goes here..." ></textarea>
-						<input type="submit" value="Message Me">
+						<form>
+							<fieldset>
+								<input type="text" placeholder="Please enter your name here." required />
+								<input type="email" placeholder="Email" required />
+								<input type="number" name="contactPhoneNumber" id="contactNumber" placeholder="Contact #">
+								<textarea placeholder="Message goes here..." ></textarea>
+								<input id="submitBtn" type="submit" value="Message Me">
+							</fieldset>
+						</form>
 					</label>
-				</div>
-			</form>
+			</div>
 			<div id="icons">
 				<ul id="ulIcons">
 					<li class="liIcons"><a href="https://www.instagram.com/breejot/" target="_blank"><i class="fab fa-instagram"></i></a></li>
