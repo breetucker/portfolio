@@ -29,7 +29,8 @@ body {
     border: 2px solid transparent;
     box-sizing: border-box;
     width: 90%;
-    max-width: 940px;  
+    max-width: 940px;
+    max-height: 780px;  
     border-radius: 2.5rem;
     box-shadow: var(--darkPink) 10px 8px 15px 1px;
     margin-top: 0;
@@ -195,6 +196,7 @@ li #catImage {
     margin-top: -215px;
     opacity: .9;
     z-index: 9;
+    text-align: center;
 }
 #contactHTML input {
   margin: 0 auto;
@@ -206,6 +208,7 @@ fieldset {
 input {
     color: var(--white);
 }
+
 fieldset input[type=submit] {
 text-align: center;
 display: block;
@@ -213,6 +216,7 @@ display: block;
 .contactCss {
     margin-left: 980px;
     color: var(--white);
+    text-align: center;
 }
 .show2 {
     margin-left: 440px;
@@ -222,6 +226,7 @@ display: block;
     text-decoration: none;
     color: var(--white);
     font-size: 22px;
+    text-align: center;
 }
 .contactCss input {
     width: 200px;
@@ -237,7 +242,8 @@ display: block;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     border: transparent;
-    margin-bottom:2px;
+    margin-bottom:6px;
+    border-radius: 4px;
 }
 #contactHTML textarea {
     background-color: var(--blue);
@@ -245,16 +251,18 @@ display: block;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
     border: transparent;
+    border-radius: 4px;
 }
 #contactHTML p, h3 {
     margin-top: 0;
 }
 #contactHTML input[type=submit]{
     color: var(--white);
-    width: 100px;
-    margin: 0 50%;
+    width: 150px;
+    margin: 0 auto;
     font-family: 'Open Sans Condensed', sans-serif;
     border:transparent;
+    border-radius: 4px;
 }
 /* Projects */
 .mySlides {
@@ -343,11 +351,29 @@ font-size: 25px;
     font-size: 40px;
     margin-bottom: 1rem;
 }
+#icecreambtn button a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 20px;
+
+}
+#icecreambtn {
+    text-align: center;
+    margin-top: 10px;
+}
+#icecreambtn button{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
 /* Bottom Icons */
 #icons {
     padding-left: 6.5rem;
     z-index: 8;
-    margin-top:  100px;
+    margin-top:  20px;
    }
    #ulIcons {
        display:flex;
@@ -370,7 +396,7 @@ font-size: 25px;
        left: 50%;
        position: absolute;
        z-index: 1;
-       max-height: 692px !important; 
+       max-height: 772px !important; 
        opacity: 0.7;
        border: 2px solid var(--white);
        border-radius: 10px;
@@ -576,7 +602,7 @@ h4 {
 }
 .liMenu {
     list-style-type: none;
-    font-size: 20px;
+    font-size: 18px;
     padding: 25px;
     padding-right: 5px;
 }
@@ -592,7 +618,7 @@ li #catImage {
 #icons {
  padding-left: 2rem;
  z-index: 8;
- margin-top:  100px;
+ margin-top:  20px;
 }
 #ulIcons {
     display:flex;
@@ -674,6 +700,9 @@ li #catImage {
 .show2 {
     margin-left: 290px;
 }
+footer {
+    font-size: 14px;
+}
 }
 
 @media screen and (max-width:715px){
@@ -697,7 +726,7 @@ li #catImage {
     #icons {
         padding-left: .7rem;
         z-index: 8;
-        margin-top:  100px;
+        margin-top:  20px;
        }
        #ulIcons {
         list-style-type: none;
@@ -781,7 +810,7 @@ li #catImage {
     }
     .liMenu {
         padding: 10px;
-        font-size: 20px;
+        font-size: 18px;
     }
     li #catImage {
         width:23px;
@@ -846,7 +875,7 @@ li #catImage {
         #flexContainer{
             margin-top: 40px;
         }
-        #bkgImg {
+        #bgImg {
             top: 14%;
         }
         #icons {
