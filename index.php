@@ -1,3 +1,34 @@
+<?php 
+	$message_sent = false;
+	if(isset($_POST['email']) && $_POST['email'] != ''){
+
+		if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+
+
+
+			//submit the form
+			$fullName = $_POST['fullName'];
+			$email = $_POST['email'];
+			$contactNumber = $_POST['contactNumber'];
+			$contactMessage = $_POST['contactMessage'];
+
+			$to = 'contact@itbree.com';
+			$body = '';
+			$subject = 'itbree Inquiry';
+            
+			$body .= 'From: ' .$fullName . "\r\n";
+			$body .= 'Email: ' .$email . "\r\n";
+			$body .= 'Contact Number: ' .$contactNumber . "\r\n";
+			$body .= 'Message: ' .$contactMessage . "\r\n";
+            $headers = 'Reply-To: '.$email. "\r\n" ;
+
+			mail($to, $subject, $body, $headers);
+			$message_sent = true; 
+		} 
+		
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,7 +135,9 @@
 								<div id="tempDescription">This data will only display if you accept location services.</div>
 							</div>
 						</div>
-
+					<div id="icecreambtn">
+						<button><a href="icecream/icecream.php"t target="_blank">Icecream!</a></button>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -112,15 +145,18 @@
 					<label for="contactForm">
 						<h3>Contact:</h3>
 						<p>Email:<a href="mailto: contact@itbree.com, breetucker@live.com">  contact@itbree.com</a></p>
-						<form>
+
+						<form method="POST" action="index.php">
 							<fieldset>
-								<input type="text" placeholder="Please enter your name here." required />
-								<input type="email" placeholder="Email" required />
-								<input type="number" name="contactPhoneNumber" id="contactNumber" placeholder="Contact #">
-								<textarea placeholder="Message goes here..." ></textarea>
-								<input id="submitBtn" type="submit" value="Message Me">
+								<input type="text" placeholder="Name" required name="fullName" />
+								<input type="email" placeholder="Email" required name="email" />
+								<input type="number" name="contactNumber" id="contactNumber" placeholder="Contact #" name="contactNumber" />
+								<textarea placeholder="Message goes here..." name="contactMessage"></textarea>
+								<input id="submitBtn" type="submit" value="Message Me" name="contactSubmit">
 							</fieldset>
 						</form>
+                        
+					
 					</label>
 			</div>
 			<div id="icons">
