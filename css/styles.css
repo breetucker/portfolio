@@ -361,12 +361,15 @@ font-size: 25px;
     text-align: center;
     margin-top: 10px;
 }
-#icecreambtn button{
+#icecreambtn button {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
     padding: 10px;
+}
+#icecreambtn button:hover {
+    background-color: var(--blue);
 }
 
 /* Bottom Icons */
@@ -392,11 +395,14 @@ font-size: 25px;
        font-size: 40px;
        color:var(--white)
    }
+   .liIcons a:hover {
+       color: var(--blue);
+   }
    #bgImage {
        left: 50%;
        position: absolute;
        z-index: 1;
-       max-height: 772px !important; 
+       max-height: 707px !important; 
        opacity: 0.7;
        border: 2px solid var(--white);
        border-radius: 10px;
