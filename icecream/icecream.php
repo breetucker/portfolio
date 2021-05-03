@@ -32,6 +32,7 @@
       <?php foreach($icecreams as $icecream): ?>
       <div class="col s6 md3">
         <div class="card">
+          <img src="img/icecream.png" alt="icecream" class="icecream">
           <div class="card-content center">
             <h6><?php echo htmlspecialchars($icecream['title']); ?></h6>
             <ul>

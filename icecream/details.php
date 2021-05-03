@@ -42,7 +42,7 @@ if(isset($_GET['id'])){
 
 <?php include('includes/header.php'); ?>
 
-<div class="container center">
+<div class="container center brown-text">
   <?php if($icecream): ?>
     <h4><?php echo htmlspecialchars($icecream['title']); ?></h4>
     <p>Created by: <?php echo htmlspecialchars($icecream['name']);?></p>

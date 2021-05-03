@@ -12,3 +12,18 @@ form {
   margin: 20px auto;
   padding: 20px;
 }
+.freepik a{
+  color: rgb(122, 90, 53) !important;
+  text-decoration: none;
+  font-size: 10px;
+}
+.freepik {
+  text-align: center;
+}
+.icecream {
+  width: 80px;
+  margin: 40px auto -30px;
+  display: block;
+  position: relative;
+  top: -30px;
+}
