@@ -114,7 +114,7 @@
 								<span class="dot" onclick="currentSlide(3)"></span>
 						</div>
 						<div class="thumbnailBtns">
-							<button class="githubBtn"><a href="https://github.com/breetucker?tab=repositories" target="_blank">View Code</a></button>
+							<button class="githubBtn"><a href="https://github.com/breetucker/onedestinydesigns/tree/main/onedestinydesigns.com" target="_blank">View Code</a></button>
 							<button id="siteOdd"><a href="https://onedestinydesigns.com" target="_blank">View Site</a></button>
 						</div>
 					 </div>
